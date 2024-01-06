@@ -6,8 +6,8 @@ The primary goal was to extract meaningful visual features from the images, clus
 
 The methods used in the project are as follows:
 1. Transfer Learning:
-   #####i.  Resnet50 Feature Vectors --> K Means Clustering
-   #####ii. Vgg16 Feature Vectors --> K Means Clustering 
+   ##### i.  Resnet50 Feature Vectors --> K Means Clustering
+   ##### ii. Vgg16 Feature Vectors --> K Means Clustering 
 
 2. Self Supervised:
     Rotated images from Data Augmentation + Labels (#rotations (0,1,2,3)) --> Train with Resnet50 --> Feature Vectors of rotated images --> K-means Clustering of feature vectors --> Train new resnet50 on rotated images with K-means clusters --> Feature vectors of rotated images from this trained resnet50 --> Repeat from step 4 for like 5 iterations --> obtain (predict) the clusters for original images using the resnet50 from last iteration    
